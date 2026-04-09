@@ -50,12 +50,11 @@ de presets POD Go.
 4. **Guide des sons** : tableau recapitulatif des combinaisons ON/OFF et du son obtenu
 5. **Notes / justifications** : explication rapide de chaque choix de bloc et de reglage
 
-## Fichiers de reference
+## Fichier de reference
 
-- `podgo-preset-rules.md` : regles de preconfiguration detaillees
 - `podgo-preset-generique-v2.md` : preset de reference (Clean/Crunch/Hard-Metal/Solo)
 
-IMPORTANT : Avant de concevoir un nouveau preset, toujours lire ces deux fichiers
+IMPORTANT : Avant de concevoir un nouveau preset, toujours lire ce fichier
 pour s'assurer de la coherence avec les contraintes et le preset existant.
 
 ## Conventions
