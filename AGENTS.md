@@ -33,13 +33,11 @@ de presets POD Go.
 
 ### Ampli sans FX Return
 
-- Si l'ampli n'a pas de FX Return (ex: Fender Champion 100) : le mentionner
-  explicitement et adapter le preset (entree input classique, ajustements gain/EQ)
+- Ne pas s'en tracasser, on ne fait des preset que pour des ampli avec FX return
 
 ### DSP
 
 - Respecter les limites DSP du POD Go
-- Privilegier les blocs legers en DSP quand c'est possible
 - Signaler si un preset risque de depasser les limites DSP
 
 ## Format de reponse attendu pour chaque preset
@@ -49,13 +47,6 @@ de presets POD Go.
 3. **Configuration STOMP** : quel footswitch (FS1-FS6) fait quoi, avec multi-assignations
 4. **Guide des sons** : tableau recapitulatif des combinaisons ON/OFF et du son obtenu
 5. **Notes / justifications** : explication rapide de chaque choix de bloc et de reglage
-
-## Fichier de reference
-
-- `podgo-preset-generique-v2.md` : preset de reference (Clean/Crunch/Hard-Metal/Solo)
-
-IMPORTANT : Avant de concevoir un nouveau preset, toujours lire ce fichier
-pour s'assurer de la coherence avec les contraintes et le preset existant.
 
 ## Conventions
 
