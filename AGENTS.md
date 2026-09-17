@@ -15,17 +15,20 @@ de presets POD Go.
 
 ## Regles de conception obligatoires
 
-### Limites hardware POD Go
-- **4 blocs** de traitement max. On n'est pas obligé de les utiliser tous
-- **1 EQ** 
-- **2 pedale d'expression**
-- **1 bloc d'ampli**
-- **1 bloc cab/IR**
+### Limites hardware POD Go 2.50
+- **4 blocs d'effets utilisateur** max, en plus des blocs dedies
+- Blocs dedies presents dans chaque preset : Wah, Volume/Pan, FX Loop, Amp/Preamp, Cab/IR et Preset EQ
+- Tous les blocs sauf Input et Output peuvent etre deplaces librement dans la chaine
+- **1 bloc Amp/Preamp** dedie
+- **1 bloc Cab/IR** dedie
+- **1 Preset EQ** dedie ; des EQ supplementaires peuvent occuper les blocs utilisateur
+- Une pedale interne gere EXP 1/EXP 2 via le toe switch ; une pedale externe EXP 2 est possible
 - **6 footswitches** assignables en mode STOMP (FS1-FS6)
-- **1 bloc FX loop** obligatoire même si on ne l'utilise pas
+- Le bloc FX Loop est toujours present, mais peut rester bypass et etre place librement
 - Mode **STOMP uniquement** (pas de snapshots)
 - Multi-assignation possible (un FS active/desactive plusieurs blocs)
 - **Un bloc ne peut etre assigne qu'a un seul footswitch** (pas de double assignation d'un meme bloc sur deux FS differents)
+- Un footswitch peut aussi alterner plusieurs parametres Min/Max sans bypasser le bloc
 
 ### Cab Sim / IR
 
@@ -44,6 +47,12 @@ de presets POD Go.
 - Signaler si un preset risque de depasser les limites DSP
 - Pas de fizz numérique
 - Prêt pour le mix live
+
+### Source de verite
+
+- En cas de contradiction, le manuel officiel `POD Go 2.50 Owner's Manual` et la liste officielle `POD Go 2.50 Models` font foi.
+- Le bypass d'un bloc ne libere pas son DSP.
+- Les modeles indisponibles faute de DSP apparaissent grises dans la liste du POD Go.
 
 ## Format de reponse attendu pour chaque preset
 

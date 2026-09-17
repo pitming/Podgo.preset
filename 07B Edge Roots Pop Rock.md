@@ -1,153 +1,87 @@
 # POD Go - 07B Edge Roots Pop Rock
-# Cible : edge-of-breakup / roots / pop-rock organique live
-# IR cible : York Audio KW 412 M25-SH - Mix JA 1
 
----
+**Cible :** edge-of-breakup, roots, garage, riffs vintage et octave de Seven Nation Army.
+**Sortie live :** MAIN Out vers FX Return, IR bypass.
 
 ## Signal path complet
 
 ```text
-Input > Wah > [1. Kinky Boost] > [2. 70s Chorus] > Essex A30 > Volume > FX Loop > [3. Simple Delay] > [4. Plate] > IR > EQ Param > Output
+Input > Wah > [4. LA Studio Comp] > [1. Simple Pitch] > Essex A30 > Volume
+      > FX Loop > [2. Simple Delay] > [3. Plate]
+      > IR York KW 412 M25-SH Mix JA 1 > Preset EQ Parametric > Output
 ```
 
----
+Le pitch est volontairement avant l'ampli pour que l'octave inferieure excite le grain de l'Essex comme le riff original.
 
 ## Reglages detailles
 
-### Bloc 1 - Kinky Boost
-| Param | Valeur |
-|-------|--------|
-| Drive | 2.2 |
-| Boost | ON |
-| Bright | OFF |
-| Etat par defaut | OFF |
+### Blocs utilisateur
 
-### Bloc 2 - 70s Chorus
-| Param | Valeur |
-|-------|--------|
-| Mode | Chorus |
-| Chorus Rate | 1.8 |
-| Vibrato Rate | 1.8 |
-| Vibrato Depth | 0.0 |
-| Spread | 5.8 |
-| Stereo | True |
-| Mix | 11% |
-| Level | 0.0 dB |
-| Headroom | 0.0 dB |
-| Etat par defaut | OFF |
+| Bloc | Parametre | Valeur |
+|------|-----------|--------|
+| Simple Pitch | Interval / Cents / Delay / Shift Level | -12 / 0 / 0.0 ms / 0.0 dB |
+| Simple Pitch | Mix / Level | 100% / 0.0 dB |
+| Simple Pitch | Etat par defaut | OFF |
+| Simple Delay | Time / Scale / Feedback / Bass / Treble | 350 ms / 100% / 17% / 5.0 / 5.0 |
+| Simple Delay | Mix / Level / Trails | 13% / 0.0 dB / ON |
+| Simple Delay | Etat par defaut | OFF |
+| Plate | Decay / Predelay / Low Cut / High Cut / Mix / Level / Trails | 3.2 / 14 ms / 145 Hz / 5.2 kHz / 8% / 0.0 dB / ON |
+| Plate | Etat par defaut | ON |
+| LA Studio Comp | Peak Reduction / Gain / Emphasis | 2.5 / 4.0 / 5.0 |
+| LA Studio Comp | Type / Mix / Level | Compress / 50% / 0.0 dB |
+| LA Studio Comp | Etat par defaut | OFF |
 
 ### Ampli - Essex A30
-| Param | Valeur |
-|-------|--------|
-| Drive | 4.1 |
-| Bass | 3.3 |
-| Cut | 5.8 |
-| Treble | 5.6 |
-| Presence | 4.9 |
-| Master | 7.8 |
-| Ch Vol | 8.0 |
-| Sag | 4.6 |
-| Hum | 0.5 |
-| Ripple | 1.0 |
-| Bias | 5.0 |
-| Bias X | 5.0 |
-| Etat | TOUJOURS ON |
 
-### Bloc 3 - Simple Delay
-| Param | Valeur |
-|-------|--------|
-| Time | 360 ms |
-| Scale | 100% |
-| Feedback | 19% |
-| Mix | 15% |
-| Level | +1.0 dB |
-| Trails | ON |
-| Etat par defaut | OFF |
+| Parametre | FS1 GAIN OFF | FS1 GAIN ON |
+|-----------|:------------:|:-----------:|
+| Drive | 4.0 | 5.8 |
+| Bass / Cut / Treble / Presence | 3.3 / 5.6 / 5.6 / 4.9 | identique |
+| Ch Vol | 8.0 | 7.2 |
+| Master | 7.8 | 7.8 |
+| Sag / Hum / Ripple | 4.6 / 0.5 / 1.0 | identique |
+| Bias / Bias X | 5.0 / 5.0 | identique |
 
-### Bloc 4 - Plate
-| Param | Valeur |
-|-------|--------|
-| Decay | 1.7 s |
-| Predelay | 14 ms |
-| Low Cut | 145 Hz |
-| High Cut | 5.2 kHz |
-| Mix | 10% |
-| Level | 0.0 dB |
-| Trails | ON |
-| Etat par defaut | ON |
+### Preset EQ - Parametric, toujours ON
 
-### IR: York Audio KW 412 M25-SH
-| Param | Valeur |
-|-------|--------|
-| IR | KW 412 M25-SH - Mix JA 1 |
-| Mix | 100% |
-| Low Cut | 90 Hz |
-| High Cut | 6.7 kHz |
-| Level | -18.0 dB |
-| Etat par defaut | BYPASS |
+| Parametre | FS3 SOLO OFF | FS3 SOLO ON |
+|-----------|:------------:|:-----------:|
+| Low Frq / Q / Gain | 170 Hz / 0.8 / -1.0 dB | identique |
+| Mid Frq / Q / Gain | 1.7 kHz / 1.1 / +0.6 dB | 1.7 kHz / 1.1 / +1.8 dB |
+| High Frq / Q / Gain | 3.4 kHz / 0.9 / 0.0 dB | identique |
+| Low Cut / High Cut | 90 Hz / 6.6 kHz | identique |
+| Level | 0.0 dB | +1.2 dB |
 
-### EQ Parametrique (bloc fixe - post IR)
-| Param | Valeur |
-|-------|--------|
-| Low Cut | 90 Hz |
-| Low Frq | 170 Hz |
-| Low Q | 0.8 |
-| Low Gain | -1.0 dB |
-| Mid Frq | 1.7 kHz |
-| Mid Q | 1.1 |
-| Mid Gain | +2.8 dB |
-| High Frq | 3.4 kHz |
-| High Q | 0.9 |
-| High Gain | +0.5 dB |
-| High Cut | 6.6 kHz |
-| Level | +2.0 dB |
-| Etat par defaut | OFF |
+### Blocs dedies
 
-### Pedale d'expression
-| Assignation | Volume (post-amp, pre-delay/reverb) |
-|-------------|--------------------------------------|
-| Heel (min) | 0% |
-| Toe (max) | 100% |
-
-### Blocs fixes
 | Bloc | Reglage | Etat par defaut |
 |------|---------|------------------|
-| Wah | EXP 1, plage 0-100% | BYPASS |
-| Volume Pedal | EXP 2, Min 0%, Max 100% | ON |
+| Wah | Fassel, Position EXP 1 0-100%, Mix 100%, Level 0.0 dB | BYPASS, toe switch |
+| Volume Pedal | Position EXP 2 0-100%, Curve Log, Level 0.0 dB | ON |
 | FX Loop | Send 0.0 dB, Return 0.0 dB, Mix 100%, Trails OFF | BYPASS |
-
----
+| IR | Mix JA 1, Low Cut 90 Hz, High Cut 6.6 kHz, Mix 100%, Level -18.0 dB | BYPASS |
+| Output | Pan Center, Level 0.0 dB | ON |
 
 ## Configuration STOMP
 
 | FS1 | FS2 | FS3 | FS4 | FS5 | FS6 |
 |-----|-----|-----|-----|-----|-----|
-| Kinky Boost | 70s Chorus | EQ Param + Simple Delay | Plate | Rien | IR casque |
-| PUSH | WIDTH | SOLO | SPACE | LIBRE | IR |
-
----
+| Parametres ampli | Simple Pitch | Simple Delay + parametres EQ | Plate | LA Studio Comp | IR |
+| GAIN | OCTAVE | SOLO | SPACE | COMP | CAB CASQUE |
 
 ## Guide des sons
 
-| Son | FS1 | FS2 | FS3 | FS4 | Description |
-|-----|:---:|:---:|:---:|:---:|-------------|
-| Base | OFF | OFF | OFF | ON | Edge-of-breakup simple, vivant et organique |
-| Roots sec | OFF | OFF | OFF | OFF | Plus frontal, plus vintage, moins poli |
-| Refrain pousse | ON | OFF | OFF | ON | Plus de corps et de grain sans tomber dans le vrai crunch |
-| Pop large | OFF/ON | ON | OFF | ON | Plus de largeur pour refrains et arpeges pop-rock |
-| Solo roots | ON | OFF | ON | ON/OFF | Lift medium propre, delay court et musical |
-
----
+| Son | FS1 | FS2 | FS3 | FS4 | FS5 | Description |
+|-----|:---:|:---:|:---:|:---:|:---:|-------------|
+| Base roots | OFF | OFF | OFF | ON | OFF | Edge organique et ouvert |
+| Garage sec | ON | OFF | OFF | OFF | OFF | Crunch nerveux pour Last Nite |
+| Refrain roots | ON | OFF | OFF | ON | OFF/ON | Plus de grain sans changer de preset |
+| Solo roots | ON | OFF | ON | OFF/ON | OFF/ON | Delay court et lift medium |
+| Seven Nation Army riff | OFF/ON | ON | OFF | OFF | OFF | Octave inferieure avant l'ampli |
 
 ## Notes / justifications
 
-- Preset principal pour `Have You Ever Seen The Rain`, `Here Comes Your Man`, `Ziggy Stardust`, `Valerie`, `Psycho Killer`, `Last Nite` et les morceaux qui demandent un ampli deja un peu pousse mais encore ouvert.
-- L'`Essex A30` est utilise plus bas et plus simplement que dans `06B` pour garder le cote edge-of-breakup plutot qu'un vrai crunch indie.
-- `Kinky Boost` sert ici de vrai push de refrain, pas de fondation permanente du son.
-- Le `70s Chorus` reste optionnel et leger : il doit juste ouvrir le preset sur certains morceaux pop, pas donner une identite 80s trop marquee.
-- Le solo type se joue avec `FS1 + FS3`, puis `FS4` selon que tu veux quelque chose de plus sec ou plus chantant.
-- IR conseillee : `Mix JA 1`. Alternative rapide a tester : `Mix 07` si tu veux un peu plus d'attaque et un grain plus brut.
-- L'IR reste en bypass vers le FX Return et ne s'active que pour le casque.
-- A regler entre `06A` et `06B` en niveau percu : il doit paraitre plus vivant que `06A`, mais nettement moins dense et moins appuye que `06B`.
-- Le compresseur a ete retire pour preserver le caractere organique et tenir dans quatre blocs libres sans sacrifier le push, la largeur, le solo ou l'ambiance.
-- Les quatre blocs libres sont `Kinky Boost`, `70s Chorus`, `Simple Delay` et `Plate` : risque DSP faible.
+- Ce preset abandonne le chorus redondant pour une fonction introuvable ailleurs : l'octave du riff de `Seven Nation Army`.
+- La variation de Drive de l'Essex remplace le Kinky Boost et preserve le caractere Tele/Vox.
+- Quatre blocs utilisateur exactement. Risque DSP faible a modere a cause du pitch.
+- Le niveau de base se situe entre 06A et 06B ; la compensation de `Ch Vol` maintient FS1 proche du meme volume percu.
