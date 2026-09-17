@@ -10,31 +10,29 @@ de presets POD Go.
 
 - **Guitare** : Fender Telecaster Standard Mex, micro Fender Vintage '64
 - **Multi-effets** : Line6 POD Go
-- **Amplis** : Fender Champion 100 ou Boss Katana MKII (utilisation de l'etage de puissance uniquement)
+- **Amplis** : Boss Katana MKII (utilisation de l'etage de puissance uniquement) / Parfois Fender Champion 100
 - **Target** : Live/groupe - Adapter pour jouer ds un groupe avec basse, batterie et 2ème guitare
 
 ## Regles de conception obligatoires
 
 ### Limites hardware POD Go
-
-- **7 blocs** de traitement max (FX Loop converti en bloc generique)
-- **1 EQ parametrique** (bloc gratuit, hors limite)
-- **1 pedale d'expression** (Wah/Volume, bloc gratuit, hors limite)
+- **4 blocs** de traitement max. On n'est pas obligé de les utiliser tous
+- **1 EQ** 
+- **2 pedale d'expression**
+- **1 bloc d'ampli**
+- **1 bloc cab/IR**
 - **6 footswitches** assignables en mode STOMP (FS1-FS6)
+- **1 bloc FX loop** obligatoire même si on ne l'utilise pas
 - Mode **STOMP uniquement** (pas de snapshots)
 - Multi-assignation possible (un FS active/desactive plusieurs blocs)
 - **Un bloc ne peut etre assigne qu'a un seul footswitch** (pas de double assignation d'un meme bloc sur deux FS differents)
 
 ### Cab Sim / IR
 
-- Inclure un bloc cab sim/IR dans les presets comme partie integrante du son
-- L'IR n'est pas une option : elle fait partie du preset cible et n'a pas besoin d'etre bypassable au footswitch
-- IR utilisateur disponible : **York Audio KW 412 M25-SH**
-- Cette IR est basee sur un **Kerry Wright 4x12** avec **Celestion G12M 25w Greenback**
-- Tendance tonale a garder en tete si on construit un preset autour de cette IR :
-  bas chaleureux et epais, medium Greenback vocal, haut detaille mais articule
-- Pour les presets documentes, mentionner explicitement quand le bloc cab/IR cible
-  cette IR York Audio plutot qu'une cab stock POD Go
+- On fait un son don l'objectif est de jouer en goupe live
+- Je rentre la sortie MAIN Out sur l'ampli de puissance
+- du coup les cab /sim IR sont désactivé ar défaut, je les active qaudn je joueau casque.
+- on peut leur assigner un footswitch s'il en reste, mais ça n'est pas prioritaire
 
 ### Ampli sans FX Return
 

@@ -1,4 +1,4 @@
-# POD Go - Heavy Alt Modern
+# POD Go - 06D Heavy Alt Modern
 # Cible : hard rock moderne / riff lourd / lead dense
 # IR cible : York Audio KW 412 M25-SH - Mix JA 2
 
@@ -7,11 +7,7 @@
 ## Signal path complet
 
 ```text
-Input > [1. DRIVE: Scream 808] > [2. DRIVE: Hedgehog D9] > [3. MOD: 70s Chorus] > [4. AMP: Placater Dirty] > [5. DELAY: Simple Delay] > [6. REVERB: Plate] > [7. IR: York Audio KW 412 M25-SH] > Output
-                                                                                               |
-                                                                                          [EQ Param] (bloc gratuit, post-IR)
-                                                                                               |
-                                                                                          [Pedale: Volume] (bloc gratuit)
+Input > Wah > [1. Scream 808] > [2. Hedgehog D9] > Placater Dirty > Volume > FX Loop > [3. Simple Delay] > [4. Plate] > IR > EQ Param > Output
 ```
 
 ---
@@ -34,19 +30,7 @@ Input > [1. DRIVE: Scream 808] > [2. DRIVE: Hedgehog D9] > [3. MOD: 70s Chorus] 
 | Tone | 4.2 |
 | Etat par defaut | OFF |
 
-### Bloc 3 - 70s Chorus
-| Param | Valeur |
-|-------|--------|
-| Mode | Chorus |
-| Chorus Rate | 2.0 |
-| Spread | 4.8 |
-| Stereo | True |
-| Mix | 12% |
-| Level | 0.0 dB |
-| Headroom | 0.0 dB |
-| Etat par defaut | OFF |
-
-### Bloc 4 - Placater Dirty
+### Ampli - Placater Dirty
 | Param | Valeur |
 |-------|--------|
 | Drive | 5.6 |
@@ -66,7 +50,7 @@ Input > [1. DRIVE: Scream 808] > [2. DRIVE: Hedgehog D9] > [3. MOD: 70s Chorus] 
 | Saturation | OFF |
 | Etat | TOUJOURS ON |
 
-### Bloc 5 - Simple Delay
+### Bloc 3 - Simple Delay
 | Param | Valeur |
 |-------|--------|
 | Time | 430 ms |
@@ -77,7 +61,7 @@ Input > [1. DRIVE: Scream 808] > [2. DRIVE: Hedgehog D9] > [3. MOD: 70s Chorus] 
 | Trails | ON |
 | Etat par defaut | OFF |
 
-### Bloc 6 - Plate
+### Bloc 4 - Plate
 | Param | Valeur |
 |-------|--------|
 | Decay | 1.8 s |
@@ -88,16 +72,17 @@ Input > [1. DRIVE: Scream 808] > [2. DRIVE: Hedgehog D9] > [3. MOD: 70s Chorus] 
 | Level | 0.0 dB |
 | Etat par defaut | ON |
 
-### Bloc 7 - IR: York Audio KW 412 M25-SH
+### IR: York Audio KW 412 M25-SH
 | Param | Valeur |
 |-------|--------|
 | IR | KW 412 M25-SH - Mix JA 2 |
+| Mix | 100% |
 | Low Cut | 95 Hz |
 | High Cut | 6.8 kHz |
-| Level | 0.0 dB |
-| Etat | TOUJOURS ON |
+| Level | -18.0 dB |
+| Etat par defaut | BYPASS |
 
-### EQ Parametrique (bloc gratuit - post IR)
+### EQ Parametrique (bloc fixe - post IR)
 | Param | Valeur |
 |-------|--------|
 | Low Cut | 90 Hz |
@@ -120,14 +105,21 @@ Input > [1. DRIVE: Scream 808] > [2. DRIVE: Hedgehog D9] > [3. MOD: 70s Chorus] 
 | Heel (min) | 0% |
 | Toe (max) | 100% |
 
+### Blocs fixes
+| Bloc | Reglage | Etat par defaut |
+|------|---------|------------------|
+| Wah | EXP 1, plage 0-100% | BYPASS |
+| Volume Pedal | EXP 2, Min 0%, Max 100% | ON |
+| FX Loop | Send 0.0 dB, Return 0.0 dB, Mix 100%, Trails OFF | BYPASS |
+
 ---
 
 ## Configuration STOMP
 
 | FS1 | FS2 | FS3 | FS4 | FS5 | FS6 |
 |-----|-----|-----|-----|-----|-----|
-| Scream 808 | Hedgehog D9 | 70s Chorus | EQ Param + Simple Delay | Plate | Rien |
-| TIGHT | HEAVY | CHORUS | SOLO | ROOM | LIBRE |
+| Scream 808 | Hedgehog D9 | Rien | EQ Param + Simple Delay | Plate | IR casque |
+| TIGHT | HEAVY | LIBRE | SOLO | ROOM | IR |
 
 ---
 
@@ -138,7 +130,6 @@ Input > [1. DRIVE: Scream 808] > [2. DRIVE: Hedgehog D9] > [3. MOD: 70s Chorus] 
 | Base | ON | OFF | OFF | OFF | ON | Hard rock moderne serre |
 | Heavy | ON | ON | OFF | OFF | ON | Riff lourd et plus compresse |
 | Lead | ON | ON | OFF | ON | ON | Lead plus present |
-| Large | ON | OFF | ON | OFF | ON | Variante plus large pour certains refrains |
 | Dry heavy | ON | ON | OFF | OFF | OFF | Plus sec et agressif |
 
 ---
@@ -149,4 +140,7 @@ Input > [1. DRIVE: Scream 808] > [2. DRIVE: Hedgehog D9] > [3. MOD: 70s Chorus] 
 - Le `Placater Dirty` donne plus de marge que le preset grunge quand il faut du vrai poids moderne.
 - L'`808` sert a serrer le bas, la `D9` n'est ajoutee que pour les morceaux les plus lourds.
 - IR conseillee : `Mix JA 2`. Alternative rapide a tester : `Mix JA 3` si tu veux encore plus de densite.
-- Volume fortement rebaisse pour que `01 Clean Jangle 90S` reste la reference commune.
+- L'IR reste en bypass vers le FX Return et ne s'active que pour le casque.
+- Volume fortement rebaisse pour que `06A Clean Jangle 90S` reste la reference commune.
+- Le chorus a ete retire : sur ce preset lourd, les deux etages de gain, le delay de lead et la reverb sont prioritaires pour la setlist.
+- Les quatre blocs libres sont `Scream 808`, `Hedgehog D9`, `Simple Delay` et `Plate`. DSP soutenu mais compatible POD Go ; verifier apres chargement du preset.
